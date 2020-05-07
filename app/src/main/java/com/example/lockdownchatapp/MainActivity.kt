@@ -2,6 +2,8 @@ package com.example.lockdownchatapp
 
 import android.os.Bundle
 import android.view.Menu
+import android.view.View
+import android.widget.Toast
 import androidx.appcompat.app.ActionBarDrawerToggle
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 import com.google.android.material.snackbar.Snackbar
@@ -25,7 +27,12 @@ class MainActivity : AppCompatActivity() {
         val toolbar: Toolbar = findViewById(R.id.toolbar)
         setSupportActionBar(toolbar)
         val toggle = ActionBarDrawerToggle(
-            this, drawer_layout, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close)
+            this,
+            drawer_layout,
+            toolbar,
+            R.string.navigation_drawer_open,
+            R.string.navigation_drawer_close
+        )
         drawer_layout.addDrawerListener(toggle)
         toggle.syncState()
     }
@@ -38,5 +45,15 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
+    fun loginClickNavHeader(view: View) {
+        Toast.makeText(this, "Clicked loginClickNavHeader fun..", Toast.LENGTH_LONG).show()
+    }
+
+    fun addChannelButton(view: View) {
+        Toast.makeText(this, "Clicked addChannelButton fun..", Toast.LENGTH_LONG).show()
+    }
+    fun sendMessageButtonClicked(view: View){
+        Toast.makeText(this, "Clicked addChannelButton fun..", Toast.LENGTH_LONG).show()
+    }
 
 }
